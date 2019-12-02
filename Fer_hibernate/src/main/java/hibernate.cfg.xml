@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+
+		<!-- Related to the connection START -->
+		<property name="connection.driver_class">com.mysql.jdbc.Driver
+		</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/FER_Hibernate</property>
+		<property name="connection.user">root</property>
+		<property name="connection.password">ROOT</property>
+		<!-- Related to the connection END -->
+
+
+		<!-- Related to hibernate properties START -->
+		<property name="show_sql">true </property>
+		<property name="dialet">org.hibernate.dialect.MySQLDialect </property>
+		<property name="hbm2ddl.auto">update</property>
+		<property name="format_sql">true</property>
+		<!-- Related to hibernate properties END -->
+
+		<!-- Related to mapping START -->
+
+		<mapping class="com.rs.fer.bean.User" />
+
+		<mapping class="com.rs.fer.bean.Address" />
+
+		<mapping class="com.rs.fer.bean.Expense" />
+		<!-- Related to the mapping END -->
+	</session-factory>
+</hibernate-configuration>
